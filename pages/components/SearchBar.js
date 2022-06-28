@@ -1,18 +1,13 @@
 import React, { useState } from "react";
 import { SearchIcon } from "@heroicons/react/outline";
-import Link from "next/link";
-import { useRouter } from "next/router";
 import Results from "../Results";
 import axios from "axios";
-import { motion } from "framer-motion";
 
 function SearchBar() {
-  const router = useRouter();
   const [query, setQuery] = useState("");
   const [pass, setPass] = useState(false);
   const access_key = "R6NFh3UB79dFPx7l8GRgdsrbNS2jXzR6qUSGRE8_f6Q";
   const [images, setImages] = useState([]);
-  const [info, setInfo] = useState([])
 
   const handleOnSubmit = (event) => {
     if (event.keyCode == 13 || event == 13) {
@@ -56,17 +51,21 @@ function SearchBar() {
         </div>
       </div>
       {pass && (
-        <div className="flex w-screen bg-white mt-20 justify-center rounded-md">
+        <div className="  flex w-screen bg-white mt-20 justify-center rounded-md">
           {pass && (
             <div className="absolute m-7 left-20 text-3xl">
               Photos of {query}
             </div>
           )}
-          <div className="grid grid-cols-3  h-full  bg-white rounded-md mt-20">
+          <div className="grid grid-cols-3   h-full  bg-white rounded-md mt-20">
             {images.map((value) => {
               return (
                 <div className=" m-2 flex object-contain ">
-                  <Results imageURL={value.urls.small} desc={value.alt_description} />
+                  <Results
+                    allURL={value}
+                    imageURL={value.urls.small}
+                    desc={value.alt_description}
+                  />
                 </div>
               );
             })}
