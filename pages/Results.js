@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useState } from "react";
 import { motion } from "framer-motion";
 import ShowData from "./ShowData";
 import { XIcon } from "@heroicons/react/outline";
@@ -7,8 +7,6 @@ function Results(props) {
   const queryString = props.imageURL;
   const description = props.desc;
   const allURL = props.allURL
-  const access_key = "R6NFh3UB79dFPx7l8GRgdsrbNS2jXzR6qUSGRE8_f6Q";
-  const [images, setImages] = useState([]);
   const [show, setShow] = useState(false);
 
   const onClickHandler = () => {

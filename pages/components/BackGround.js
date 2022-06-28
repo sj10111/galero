@@ -10,7 +10,7 @@ function BackGround() {
       const imageData = await axios
         .get("https://api.unsplash.com/photos/random/?client_id=" + access_key)
         .then((res) => {
-          return res.data.urls.full;
+          return res.data.urls.regular;
         })
         .catch((err) => {
           console.log(err.code);

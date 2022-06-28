@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { XIcon } from "@heroicons/react/outline";
 import { motion } from "framer-motion";
 import DropDown from "./components/DropDown";
 
