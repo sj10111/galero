@@ -1,12 +1,14 @@
-import React, {useState } from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ShowData from "./ShowData";
 import { XIcon } from "@heroicons/react/outline";
+import Masonry from "react-masonry-css";
+import Urls from "./components/Urls";
 
 function Results(props) {
   const queryString = props.imageURL;
   const description = props.desc;
-  const allURL = props.allURL
+  const allURL = props.allURL;
   const [show, setShow] = useState(false);
 
   const onClickHandler = () => {
@@ -16,6 +18,7 @@ function Results(props) {
 
   return (
     <motion.div className="shadow-md flex  ">
+      
       <motion.img
         src={queryString}
         className="flex object-cover"
@@ -24,13 +27,16 @@ function Results(props) {
           onClickHandler();
         }}
       />
+     
       <motion.div>
         {show && (
-          <motion.div
-      
-
-          className="fixed top-[15%] right-[15%]">
-            <ShowData queryString={queryString} desc={description} allURL={allURL} />
+          <motion.div className="fixed top-[15%] right-[15%]">
+            <ShowData
+              queryString={queryString}
+              desc={description}
+              allURL={allURL}
+            />
+           
             <div
               onClick={() => {
                 onClickHandler();
