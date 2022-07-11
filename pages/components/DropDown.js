@@ -31,7 +31,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.urls.raw}
+                  href={props.url.raw}
                   
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -45,7 +45,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.urls.full}
+                  href={props.url.full}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -58,7 +58,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.urls.regular}
+                  href={props.url.regular}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -71,7 +71,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.urls.small}
+                  href={props.url.small}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
