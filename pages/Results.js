@@ -34,7 +34,7 @@ function Results(props) {
             <ShowData
               queryString={queryString}
               desc={description}
-              allURL={allURL.urls}
+              allURL={allURL}
             />
            
             <div

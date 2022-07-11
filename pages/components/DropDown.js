@@ -8,7 +8,9 @@ function classNames(...classes) {
 }
 
 export default function DropDown(props) {
+  const data = props.url.allURL.urls
   return (
+    
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
@@ -31,7 +33,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.url.raw}
+                  href={data.raw}
                   
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
@@ -45,7 +47,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.url.full}
+                  href={data.full}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -58,7 +60,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.url.regular}
+                  href={data.regular}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'
@@ -71,7 +73,7 @@ export default function DropDown(props) {
             <Menu.Item>
               {({ active }) => (
                 <a
-                  href={props.url.small}
+                  href={data.small}
                   className={classNames(
                     active ? 'bg-gray-100 text-gray-900' : 'text-gray-700',
                     'block px-4 py-2 text-sm'

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import DropDown from "./components/DropDown";
 
  function ShowData(props) {
-  const data = props.allUrl
+ 
   
   const [show, setShow] = useState(true);
   const closePopup = () => {
@@ -21,7 +21,7 @@ import DropDown from "./components/DropDown";
             <div className="absolute text-3xl left-[55%] top-[10%]">
               {props.desc}
               <div className="relative">
-                <DropDown url={data} />
+                <DropDown url={props} />
               </div>
             </div>
           </div>
