@@ -2,7 +2,7 @@
 import { Fragment, useState } from "react";
 import { Menu, Transition } from "@headlessui/react";
 import { ChevronDownIcon } from "@heroicons/react/solid";
-import PostUrls from "../lambdaAxios/PostUrls";
+import PostUrls from '../../PostUrls'
 import { BarLoader } from "react-spinners";
 
 function classNames(...classes) {
