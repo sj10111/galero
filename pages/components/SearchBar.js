@@ -7,6 +7,7 @@ import Urls from "./Urls";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
+  const [results,setResults]=useState("")
   const [pass, setPass] = useState(false);
   const access_key = "R6NFh3UB79dFPx7l8GRgdsrbNS2jXzR6qUSGRE8_f6Q";
   const [images, setImages] = useState([]);
@@ -15,6 +16,7 @@ function SearchBar() {
     if (event.keyCode == 13 || event == 13) {
       getImages();
       setPass(true);
+      setResults(query)
     }
   };
 
@@ -56,7 +58,7 @@ function SearchBar() {
         <div className=" w-screen  bg-white mt-20 justify-center rounded-md">
           {pass && (
             <div className=" flex justify-between w-screen absolute my-7 px-10  text-3xl">
-              Photos of {query}
+              Photos of {results}
               <div className="">
           <Urls imageurls={images}  />
           </div>
