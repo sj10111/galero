@@ -31,7 +31,7 @@ function SearchBar() {
 
     setImages(imageData.data.results);
   };
-
+console.log(images)
 
 
   return (
@@ -67,8 +67,9 @@ function SearchBar() {
           <div className="flex mt-20 justify-center">
            
           <Masonry breakpointCols={3} className="flex  w-auto">
-            {images.map((value) => {
+            {images.map(value => {
               return (
+                <li className="list-none" key={value.id}>
                 <div className="m-2">
                   <Results
                     allURL={value}
@@ -77,6 +78,7 @@ function SearchBar() {
                     allurls={value}
                   />
                 </div>
+                </li>
               );
             })}
           </Masonry>
