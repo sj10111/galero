@@ -58,7 +58,7 @@ function SearchBar() {
             <div className=" flex justify-between w-screen absolute my-7 px-10  text-3xl">
               Photos of {query}
               <div className="">
-          <Urls  />
+          <Urls imageurls={images}  />
           </div>
             </div>
           )}

@@ -12,16 +12,21 @@
     "@headlessui/react": "^1.6.5",
     "@heroicons/react": "^1.0.6",
     "autoprefixer": "^10.4.7",
+    "aws-sdk": "^2.1167.0",
     "axios": "^0.27.2",
+    "file-saver": "^2.0.5",
     "framer-motion": "^6.3.15",
+    "js-url-downloader": "^0.1.6",
     "next": "12.1.6",
     "postcss": "^8.4.14",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-masonry-css": "^1.0.16",
     "react-responsive-masonry": "^2.1.4",
+    "react-spinners": "^0.13.3",
     "tailwindcss": "^3.1.4",
-    "unsplash-js": "^7.0.15"
+    "unsplash-js": "^7.0.15",
+    "url-parse": "^1.5.10"
   },
   "devDependencies": {
     "eslint": "8.18.0",
