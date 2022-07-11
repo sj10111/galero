@@ -19,7 +19,7 @@ function BackGround() {
     };
 
     fetchImages();
-    console.log(imageUrl);
+   
   }, []);
 
   return (
