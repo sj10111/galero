@@ -19,7 +19,7 @@ function ShowData(props) {
             <div className="absolute text-3xl left-[55%] top-[10%]">
               {props.desc}
               <div className="relative">
-                <DropDown urls={props.allURL.urls} />
+               
               </div>
             </div>
           </div>
