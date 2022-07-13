@@ -4,6 +4,13 @@ import Results from "../Results";
 import axios from "axios";
 import Masonry from "react-masonry-css";
 import Urls from "./Urls";
+import{motion} from "framer-motion"
+const breakpointColumnsObj = {
+  default: 4,
+  1100: 3,
+  700: 2,
+  500: 1
+};
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -11,6 +18,7 @@ function SearchBar() {
   const [pass, setPass] = useState(false);
   const access_key = "R6NFh3UB79dFPx7l8GRgdsrbNS2jXzR6qUSGRE8_f6Q";
   const [images, setImages] = useState([]);
+  const [data,setData]=useState([])
 
   const handleOnSubmit = (event) => {
     if (event.keyCode == 13 || event == 13) {
@@ -28,7 +36,7 @@ function SearchBar() {
       });
 
 
-
+      setData(imageData)
     setImages(imageData.data.results);
   };
 console.log(images)
@@ -66,18 +74,25 @@ console.log(images)
           )}
           <div className="flex mt-20 justify-center">
            
-          <Masonry breakpointCols={3} className="flex  w-auto">
+          <Masonry
+       breakpointCols={breakpointColumnsObj}
+           col className="flex  w-auto">
             {images.map(value => {
               return (
                 <li className="list-none" key={value.id}>
-                <div className="m-2">
+                <motion.div className="m-2">
                   <Results
                     allURL={value}
-                    imageURL={value.urls.small}
+                    imageURL={value.urls.regular}
                     desc={value.alt_description} 
                     allurls={value}
+                   userName = {value.user.name}
+                   profileImage={value.user.profile_image.small}
+                   instagramID={value.user.instagram_username}
+                   likes={value.likes}
+                   created={value.created_at}
                   />
-                </div>
+                </motion.div>
                 </li>
               );
             })}

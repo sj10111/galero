@@ -14,9 +14,11 @@
     "autoprefixer": "^10.4.7",
     "aws-sdk": "^2.1167.0",
     "axios": "^0.27.2",
+    "detect-zoom": "^1.0.2",
     "file-saver": "^2.0.5",
     "framer-motion": "^6.3.15",
     "js-url-downloader": "^0.1.6",
+    "moment": "^2.29.4",
     "next": "12.1.6",
     "postcss": "^8.4.14",
     "react": "18.2.0",
@@ -26,7 +28,8 @@
     "react-spinners": "^0.13.3",
     "tailwindcss": "^3.1.4",
     "unsplash-js": "^7.0.15",
-    "url-parse": "^1.5.10"
+    "url-parse": "^1.5.10",
+    "zoom-level": "^2.5.0"
   },
   "devDependencies": {
     "eslint": "8.18.0",
